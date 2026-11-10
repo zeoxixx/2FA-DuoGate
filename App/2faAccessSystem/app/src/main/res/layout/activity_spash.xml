@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    tools:context=".SignupActivity">
+
+    <!-- 상단 회색 타이틀바 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#1E3D32">
+        <!-- android:background="#D3D3D3" -->
+
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2FA 출입인증 시스템"
+            android:fontFamily="@font/neo_a"
+            android:textSize="18sp"
+            android:textColor="#D8CAB8"
+            android:textStyle="bold"
+            android:layout_centerInParent="true" />
+
+        <Button
+            android:id="@+id/btnMyPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="-7dp"
+            android:background="@android:color/transparent"
+            android:text="☰"
+            android:textColor="#D8CAB8"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <!-- 안내 텍스트 -->
+
+    <!-- ID 입력 + 중복확인 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:text=" 회원정보를 입력하세요"
+        android:fontFamily="@font/pm"
+        android:textSize="17sp"
+        android:textColor="#1E3D32" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <EditText
+            android:id="@+id/editId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="ID 입력" />
+
+
+        <Button
+            android:id="@+id/btnCheckId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#1E3D32"
+            android:fontFamily="@font/neo_c"
+            android:text="중복 확인"
+            android:textColor="#D8CAB8"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- 이름 입력 -->
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="이름" />
+
+    <!-- 비밀번호 입력 -->
+    <EditText
+        android:id="@+id/editPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="비밀번호 (8자 이상)"
+        android:inputType="textPassword" />
+
+    <!-- 비밀번호 확인 -->
+    <EditText
+        android:id="@+id/editPasswordConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="비밀번호 확인"
+        android:inputType="textPassword" />
+
+    <!-- 회원가입 버튼 -->
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#1E3D32"
+        android:fontFamily="@font/neo_c"
+        android:text="회원가입"
+        android:textColor="#D8CAB8"
+        android:textSize="14sp" />
+</LinearLayout>

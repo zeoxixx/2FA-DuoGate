@@ -1,0 +1,38 @@
+
+**** app 설명
+- app의 코드 파일 압축한 것과 apk 첨부.
+2faAccessSystem/app/src/main/res/layout 폴더에 앱 UI 디자인 코드.
+2faAccessSystem/app/src/main/java/com/example/a2faaccesssystem 폴더 속 백그라운드 인증과 otp 인증을 포함한 모든 앱 작동 코드가 들어있음.
+
+특히 앱은 백그라운드로 ssaid를 전송하게끔 설계하였음.
+
+**** server 설명
+- cmd 창에 2FA출입통제시스템/Server 폴더까지 이동한 후 pip install -r requirements.txt 파일 먼저 실행하여야 함.
+- 그 후 python -m api.app 으로 서버 열림.
+
+앱, 라즈베리 파이, DB 사이의 중간 다리 역할. 
+여기에 RSA 키쌍도 존재하며 AES 키 교환 전까지 이 RSA 키를 사용하게 됨.
+또한 AES 키를 저장할 때도 서버 RSA 키로 암호화하여 DB에 저장하게 됨.
+
+앱에서 전달받은 SSAID 값을 비교하고 결과를 전송하며
+2차인증의 OTP를 시간 기반하여 생성 후 입력 받은 값을 검증하고 앱, 라즈베리파이에 결과 전송.
+이 모든 과정을 DB에 모든 로그를 기록하도록 함.
+
+**** Raspberry PI 설명
+- flask_thread.py 파일
+포트를 열어서 1차인증의 결과를 서버에서 전송할 수 있게 함.
+이 결과값에 따라 라즈베리 파이에 연결된 TEXT LCD에 1FA passed or Fail 출력되게 함
+RPI_0601 파일 실행 전 미리 실행해두어야 함.
+
+- RPI_0601.py 파일
+본 파일. 도어 제어에 관한 모든 코드가 담겨있음.
+
+
+**** WebPage 설명
+- 모든 인증 과정의 로그를 볼 수 있게 구성하였음.
+- Localhost, root 사용자, midas 데이터베이스를 참조하며 비밀번호는 0000
+
+- 각각 섹션(전체인증, 1차인증, 2차인증, 도어제어(라즈베리파이 작동)의 로그이며
+   각각의 성공률, 평균시간, 지연률에 관한 성능도 보여줄 수 있게끔 구성함
+
+- xampp를 이용하여 localhost 페이지로 접속할 수 있음.

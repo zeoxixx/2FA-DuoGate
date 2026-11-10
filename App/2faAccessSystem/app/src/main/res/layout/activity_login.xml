@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- 상단 회색 타이틀바 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#1E3D32">
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2FA 출입인증 시스템"
+            android:fontFamily="@font/neo_a"
+            android:textColor="#D8CAB8"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true" />
+
+        <Button
+            android:id="@+id/btnMyPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:background="@android:color/transparent"
+            android:text="☰"
+            android:textColor="#D8CAB8"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <!-- 로그인 콘텐츠 영역 -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp"
+        android:gravity="top|center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="로그인 정보를 입력하세요"
+            android:fontFamily="@font/neo_c"
+            android:textColor="#444444"
+            android:textSize="14sp"
+            android:layout_marginTop="32dp"/>
+
+        <EditText
+            android:id="@+id/editId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType = "text"
+            android:hint="ID 입력"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#000000"
+            android:textColorHint="#888888"/>
+
+        <EditText
+            android:id="@+id/editPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="비밀번호"
+            android:inputType="textPassword"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#000000"
+            android:textColorHint="#888888"/>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="로그인"
+            android:fontFamily="@font/neo_b"
+            android:textColor="#D8CAB8"
+            android:textSize="18sp"
+            android:backgroundTint="#1E3D32"
+            android:layout_marginTop="28dp"/>
+    </LinearLayout>
+
+</LinearLayout>

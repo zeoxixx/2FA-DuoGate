@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- 상단 타이틀바 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#1E3D32">
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2FA 출입인증 시스템"
+            android:fontFamily="@font/neo_a"
+            android:textSize="18sp"
+            android:textColor="#D8CAB8"
+            android:textStyle="bold"
+            android:layout_centerInParent="true" />
+
+        <Button
+            android:id="@+id/btnMyPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:background="@android:color/transparent"
+            android:text="☰"
+            android:textColor="#D8CAB8"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <!-- 본문 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <ImageView
+            android:id="@+id/padlockImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="32dp"
+            android:src="@drawable/ic_lock_close"
+            android:contentDescription="자물쇠 아이콘"
+            app:tint="#D32F2F" />
+
+        <TextView
+            android:id="@+id/tvLockTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="출입이 차단되었습니다"
+            android:fontFamily="@font/neo_b"
+            android:textSize="22sp"
+            android:textColor="#D32F2F"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:id="@+id/tvLockDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OTP 3회 이상 실패로 인해\n잠금되었습니다.\n관리자에게 문의하세요."
+            android:fontFamily="@font/neo_b"
+            android:textSize="18sp"
+            android:textColor="#555555"
+            android:gravity="center"
+            android:lineSpacingExtra="6dp"
+            android:padding="16dp"
+            android:background="@drawable/box_background"
+            android:layout_marginTop="12dp"
+            />
+
+    </LinearLayout>
+</LinearLayout>

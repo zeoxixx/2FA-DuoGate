@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <!-- 상단 타이틀 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#1E3D32">
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="2FA 출입인증 시스템"
+            android:fontFamily="@font/neo_a"
+            android:textColor="#D8CAB8"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnMyPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:background="@android:color/transparent"
+            android:text="☰"
+            android:textColor="#D8CAB8"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <!-- 본문 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/otpPrompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="출입을 위해 OTP를 확인하세요."
+            android:fontFamily="@font/neo_c"
+            android:textColor="#1E3D32"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textOtpCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:letterSpacing="0.2"
+            android:text="------"
+            android:textColor="#000000"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <!-- 원형 타이머 -->
+        <FrameLayout
+            android:layout_width="150dp"
+            android:layout_height="150dp">
+
+            <ProgressBar
+                android:id="@+id/progressOtpTimer"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:indeterminate="false"
+                android:max="30"
+                android:progress="30"
+                android:progressDrawable="@drawable/progress_circle"
+                android:rotation="-90" />
+
+            <TextView
+                android:id="@+id/textOtpTimer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:fontFamily="@font/neo_b"
+                android:text="30"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,9 @@
+HTTP 상태 코드
+
+200 OK 성공
+400 Bad Request 잘못된 요청 ( 형식 오류, 필드 누락 등 )
+401 Unauthorized 인증 실패 (OTP 불일치, 로그인 실패 등)
+403 Forbidden 접근 금지(권한) (계정 잠금, 만료된 토큰)
+404 NOT FOUND 리소스 없음 (테이블 기록 없거나 id 불일치 등)
+409 Conflict 중복/충돌 (이미 인증된 요청)
+500 Internal Server Error (Exception) 서버 내부 오류 / 예외

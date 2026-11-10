@@ -1,0 +1,58 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="150dp"
+    android:height="150dp"
+    android:viewportWidth="150"
+    android:viewportHeight="150">
+
+
+    <!-- 도어락 본체 -->
+    <path
+        android:fillColor="#D8CAB8"
+        android:strokeColor="#1E3D32"
+        android:strokeWidth="6"
+        android:pathData="M45,7.5 Q75,0 105,7.5 L105,142.5 Q75,150 45,142.5 Z" />
+
+    <!-- 키패드 네모 구역 -->
+    <path
+        android:fillColor="#D8CAB8"
+        android:strokeColor="#1E3D32"
+        android:strokeWidth="4"
+        android:pathData="M55.5,27 h39 v54 h-39 z" />
+
+    <!-- 키패드 점들 -->
+    <!-- 1줄 -->
+    <path android:fillColor="#1E3D32" android:pathData="M63,36 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0" />
+    <path android:fillColor="#1E3D32" android:pathData="M72,36 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0" />
+    <path android:fillColor="#1E3D32" android:pathData="M81,36 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0" />
+    <!-- 2줄 -->
+    <path android:fillColor="#D32F2F" android:pathData="M63,48 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0" />
+    <path android:fillColor="#1E3D32" android:pathData="M72,48 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0" />
+    <path android:fillColor="#1E3D32" android:pathData="M81,48 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0" />
+    <!-- 3줄 -->
+    <path android:fillColor="#1E3D32" android:pathData="M63,60 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0" />
+    <path android:fillColor="#1E3D32" android:pathData="M72,60 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0" />
+    <path android:fillColor="#1E3D32" android:pathData="M81,60 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0" />
+    <!-- 4줄 -->
+    <path android:fillColor="#1E3D32" android:pathData="M63,72 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0" />
+    <path android:fillColor="#1E3D32" android:pathData="M72,72 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0" />
+    <path android:fillColor="#1E3D32" android:pathData="M81,72 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0" />
+
+    <!-- 손잡이 원형 -->
+    <path
+        android:fillColor="#D8CAB8"
+        android:strokeColor="#1E3D32"
+        android:strokeWidth="4.5"
+        android:pathData="M52.5,108 a22.5,22.5 0 1,0 45,0 a22.5,22.5 0 1,0 -45,0" />
+
+    <!-- 손잡이 막대 -->
+    <path
+        android:fillColor="#D8CAB8"
+        android:strokeColor="#1E3D32"
+        android:strokeWidth="4.5"
+        android:pathData="M75,108 h45 v9 h-45 z" />
+
+    <!-- 손잡이 끝 디테일 -->
+    <path
+        android:fillColor="#1E3D32"
+        android:pathData="M112.5,108 h4.5 v9 h-4.5 z" />
+</vector>

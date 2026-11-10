@@ -1,0 +1,33 @@
+# Android / Gradle
+.gradle/
+.kotlin/
+**/build/
+.idea/
+local.properties
+*.iml
+**/.cxx/
+
+# Build artifacts
+*.apk
+*.aab
+*.zip
+
+# Signing keys
+*.jks
+*.keystore
+
+# Server secrets
+.env
+.env.*
+!.env.example
+*.key
+**/private.pem
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store

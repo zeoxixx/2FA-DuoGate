@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- ✅ 상단 타이틀바 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#1E3D32">
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2FA 출입인증 시스템"
+            android:fontFamily="@font/neo_a"
+            android:textSize="18sp"
+            android:textColor="#D8CAB8"
+            android:textStyle="bold"
+            android:layout_centerInParent="true" />
+
+        <Button
+            android:id="@+id/btnMyPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:background="@android:color/transparent"
+            android:text="☰"
+            android:textColor="#D8CAB8"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <!-- ✅ 본문 내용 -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <ImageView
+            android:id="@+id/padlockImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="32dp"
+            android:src="@drawable/ic_lock_open"
+            android:contentDescription="자물쇠 아이콘" />
+
+        <TextView
+            android:id="@+id/tvAccessGranted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="출입이 허용되었습니다"
+            android:fontFamily="@font/neo_a"
+            android:textSize="22sp"
+            android:textColor="#1E3D32"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="문이 잠시 후 열립니다"
+            android:fontFamily="@font/neo_b"
+            android:textSize="16sp"
+            android:textColor="#555555"
+            android:gravity="center"/>
+    </LinearLayout>
+</LinearLayout>
