@@ -14,6 +14,8 @@ shared_state = {
     "firstauth_token": None
 }
 
+## 실습의 안정성을 위해 하드 코딩된 AES 키임.
+## 실제 배포 시 환경변수 주입으로 바꾸어야 함
 AES_KEY = b'!\xca\xd6h\xb3\xff\x16\x19a=H4\xf1\xd2p\xa0\xd0\x14+\xcci\x0b\xea\xb3\x113b\xac\x8f\x074Y'
 
 def aes_decrypt_gcm(encrypted_b64):
